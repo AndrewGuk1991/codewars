@@ -1,0 +1,98 @@
+// Description: 
+
+// Task
+// Implement a function which takes a number N and returns the N'th row of the sequence below. If the argument is greater than the number of rows in the sequence, then start from the beginning again, e.g. row 27 is the same as row 1.
+
+// Sequence
+// 1:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+// 2:  BBCDEFGHIJKLMNOPQRSTUVWXYZ
+// 3:  CCCDEFGHIJKLMNOPQRSTUVWXYZ
+// 4:  DDDDEFGHIJKLMNOPQRSTUVWXYZ
+// 5:  EEEEEFGHIJKLMNOPQRSTUVWXYZ
+// 6:  FFFFFFGHIJKLMNOPQRSTUVWXYZ
+// 7:  GGGGGGGHIJKLMNOPQRSTUVWXYZ
+// 8:  HHHHHHHHIJKLMNOPQRSTUVWXYZ
+// 9:  IIIIIIIIIJKLMNOPQRSTUVWXYZ
+// 10: JJJJJJJJJJKLMNOPQRSTUVWXYZ
+// 11: KKKKKKKKKKKLMNOPQRSTUVWXYZ
+// 12: LLLLLLLLLLLLMNOPQRSTUVWXYZ
+// 13: MMMMMMMMMMMMMNOPQRSTUVWXYZ
+// 14: NNNNNNNNNNNNNNOPQRSTUVWXYZ
+// 15: OOOOOOOOOOOOOOOPQRSTUVWXYZ
+// 16: PPPPPPPPPPPPPPPPQRSTUVWXYZ
+// 17: QQQQQQQQQQQQQQQQQRSTUVWXYZ
+// 18: RRRRRRRRRRRRRRRRRRSTUVWXYZ
+// 19: SSSSSSSSSSSSSSSSSSSTUVWXYZ
+// 20: TTTTTTTTTTTTTTTTTTTTUVWXYZ
+// 21: UUUUUUUUUUUUUUUUUUUUUVWXYZ
+// 22: VVVVVVVVVVVVVVVVVVVVVVWXYZ
+// 23: WWWWWWWWWWWWWWWWWWWWWWWXYZ
+// 24: XXXXXXXXXXXXXXXXXXXXXXXXYZ
+// 25: YYYYYYYYYYYYYYYYYYYYYYYYYZ
+// 26: ZZZZZZZZZZZZZZZZZZZZZZZZZZ
+
+// Solution: 
+
+function getRow(n) {
+    if (n <= 26) {
+        switch (n) {
+            case 1: return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 2: return 'BBCDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 3: return 'CCCDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 4: return 'DDDDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 5: return 'EEEEEFGHIJKLMNOPQRSTUVWXYZ'
+            case 6: return 'FFFFFFGHIJKLMNOPQRSTUVWXYZ'
+            case 7: return 'GGGGGGGHIJKLMNOPQRSTUVWXYZ'
+            case 8: return 'HHHHHHHHIJKLMNOPQRSTUVWXYZ'
+            case 9: return 'IIIIIIIIIJKLMNOPQRSTUVWXYZ'
+            case 10: return 'JJJJJJJJJJKLMNOPQRSTUVWXYZ'
+            case 11: return 'KKKKKKKKKKKLMNOPQRSTUVWXYZ'
+            case 12: return 'LLLLLLLLLLLLMNOPQRSTUVWXYZ'
+            case 13: return 'MMMMMMMMMMMMMNOPQRSTUVWXYZ'
+            case 14: return 'NNNNNNNNNNNNNNOPQRSTUVWXYZ'
+            case 15: return 'OOOOOOOOOOOOOOOPQRSTUVWXYZ'
+            case 16: return 'PPPPPPPPPPPPPPPPQRSTUVWXYZ'
+            case 17: return 'QQQQQQQQQQQQQQQQQRSTUVWXYZ'
+            case 18: return 'RRRRRRRRRRRRRRRRRRSTUVWXYZ'
+            case 19: return 'SSSSSSSSSSSSSSSSSSSTUVWXYZ'
+            case 20: return 'TTTTTTTTTTTTTTTTTTTTUVWXYZ'
+            case 21: return 'UUUUUUUUUUUUUUUUUUUUUVWXYZ'
+            case 22: return 'VVVVVVVVVVVVVVVVVVVVVVWXYZ'
+            case 23: return 'WWWWWWWWWWWWWWWWWWWWWWWXYZ'
+            case 24: return 'XXXXXXXXXXXXXXXXXXXXXXXXYZ'
+            case 25: return 'YYYYYYYYYYYYYYYYYYYYYYYYYZ'
+            case 26: return 'ZZZZZZZZZZZZZZZZZZZZZZZZZZ'
+        }
+    }
+
+    if (n > 26) {
+        switch (n % 26) {
+            case 1: return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 2: return 'BBCDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 3: return 'CCCDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 4: return 'DDDDEFGHIJKLMNOPQRSTUVWXYZ'
+            case 5: return 'EEEEEFGHIJKLMNOPQRSTUVWXYZ'
+            case 6: return 'FFFFFFGHIJKLMNOPQRSTUVWXYZ'
+            case 7: return 'GGGGGGGHIJKLMNOPQRSTUVWXYZ'
+            case 8: return 'HHHHHHHHIJKLMNOPQRSTUVWXYZ'
+            case 9: return 'IIIIIIIIIJKLMNOPQRSTUVWXYZ'
+            case 10: return 'JJJJJJJJJJKLMNOPQRSTUVWXYZ'
+            case 11: return 'KKKKKKKKKKKLMNOPQRSTUVWXYZ'
+            case 12: return 'LLLLLLLLLLLLMNOPQRSTUVWXYZ'
+            case 13: return 'MMMMMMMMMMMMMNOPQRSTUVWXYZ'
+            case 14: return 'NNNNNNNNNNNNNNOPQRSTUVWXYZ'
+            case 15: return 'OOOOOOOOOOOOOOOPQRSTUVWXYZ'
+            case 16: return 'PPPPPPPPPPPPPPPPQRSTUVWXYZ'
+            case 17: return 'QQQQQQQQQQQQQQQQQRSTUVWXYZ'
+            case 18: return 'RRRRRRRRRRRRRRRRRRSTUVWXYZ'
+            case 19: return 'SSSSSSSSSSSSSSSSSSSTUVWXYZ'
+            case 20: return 'TTTTTTTTTTTTTTTTTTTTUVWXYZ'
+            case 21: return 'UUUUUUUUUUUUUUUUUUUUUVWXYZ'
+            case 22: return 'VVVVVVVVVVVVVVVVVVVVVVWXYZ'
+            case 23: return 'WWWWWWWWWWWWWWWWWWWWWWWXYZ'
+            case 24: return 'XXXXXXXXXXXXXXXXXXXXXXXXYZ'
+            case 25: return 'YYYYYYYYYYYYYYYYYYYYYYYYYZ'
+            case 0: return 'ZZZZZZZZZZZZZZZZZZZZZZZZZZ'
+        }
+    }
+}
